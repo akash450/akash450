@@ -1,0 +1,389 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color:white;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+.giantwrapper {
+	display: flex;
+	padding: 0;
+}
+
+#main{
+	vertical-align: middle;
+	width:100%;
+	text-align: center;
+}
+#main section, #graphdiv section {
+	background-size: cover;
+	height:auto;
+	width: 100%;
+	display: table;
+	border-radius: 15px;
+	padding: 10px 10px;
+	margin-top: 10px;
+}
+
+#main section article, #graphdiv section article {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+#image {
+	border: none;
+	outline: none;
+	width: auto;
+	height: 50%;
+}
+
+#mapwrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 20px;
+}
+
+#map {
+	/* Uses viewport (vw & vh) units: https://css-tricks.com/fun-viewport-units */
+	width: 100%;
+	height: 65vh;
+	background-color: white;
+	box-shadow: rgba(0,0,0,0.5) 0 5px 10px;
+	z-index: 0;
+}
+
+.btn-group{
+	width:auto;
+}
+
+#records, #activedeaths, #safety, #safety_tips {
+	background-color:gray;
+	text-align: center;
+	font-size: medium;
+	font-weight: bold;
+	display: block;
+}
+
+.activedeaths {
+	display: flex;
+	justify-content: center;
+}
+
+#graphs {
+	width: 100%;
+	height: auto;
+}
+
+#piechart, #linechart {padding-left: 20px;}
+
+#date {
+	top: 0;
+	vertical-align: middle;
+	transform: translateX(50%);
+}
+
+.active {padding-right: 20px;}
+
+.death {padding-left: 20px;}
+
+#safety {
+	padding-top: 10px;
+	bottom: 0;
+}
+
+#safety_tips {
+	padding-bottom: 10px;
+	bottom: 5%;
+}
+
+ul, li {width: auto; height: auto;}
+
+ul {
+	list-style: square;
+	list-style-position: inside;
+}
+
+/* -------------night/day mode -------------- */
+body.night {
+	background-color: #00003f; /* For browsers that do not support gradients */
+}
+
+.toggle, .sharescroll, #threed  {
+	font-size: 15px;
+    cursor: pointer;
+    padding: 10px 15px;
+	border-radius: 50%;
+	background-color: white;
+	border: 2px solid black;
+	outline:none;
+}
+.toggle.active, .sharescroll.active, #threed.active {
+	background-color: black;
+	border: 2px solid white;
+	cursor: pointer;
+	color: white;
+	outline:none;
+}
+.toggle:hover, .toggle.active:hover, .sharescroll:hover, #threed:hover,
+.sharescroll.active:hover, #threed.active:hover {
+	font-size: 20px;
+	transition: 0.4s ease;
+}
+h1, h2, h3, p, ul {
+	margin: 0;
+	padding: 0;
+	transition: 0.4s;
+}
+
+p {font-size: 20px;}
+
+body.night h1, body.night h2, body.night h3, body.night p, body.night ul {
+	color: white;
+}
+body.night #records, body.night #activedeaths, body.night #graphs, body.night #safety, body.night #safety_tips {
+	background-color: black;
+}
+
+body.night .openbtn {
+	background-color: #00003f;
+	color: white;
+}
+
+body.night .openbtn:hover {
+	font-size: 25px;
+	transition: 0.4s ease;
+}
+
+body.night .sidebar a:hover {
+	font-size: 55px;
+	transition: 0.4s ease;
+}
+
+body.night .sidebar {
+	background-color: #00003f;
+}
+
+body.night .sidebar a, body.night .sidebar h1, body.night .sidebar p {
+	color: white;
+}
+
+body.night #footer {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+body.night .header a {color: white;}
+
+body.night #threed {color: white;}
+/* ----------------- info button --------------------------------- */
+.infoandtoggle {
+	width: auto;
+	height: auto;
+}
+.sidebar h1, p {
+    text-align: center;
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 30px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+	font-size: 55px;
+	transition: 0.4s ease;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  outline:none;
+}
+
+.openbtn:hover {
+  font-size: 25px;
+  transition: 0.4s ease;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+.left, .center, .right {
+	width: 100px;
+	height: 100px;
+}
+
+/* ------------------sharing-----------------------------*/
+.share {
+	display: flex;
+	padding: 16px;
+	top: 50%;
+	justify-content: space-around;
+	text-align: center;
+  }
+  
+  .share a i {
+	font-size: 32px;
+  }
+  
+  .share a {
+	margin: 12px 0;
+	transition: 500ms;
+  }
+  
+  .share a:hover {
+	transform: scale(1.2);
+  }
+  
+  .share .fa-facebook {
+	color: #3b5998;
+  }
+  
+  .share .fa-twitter {
+	color: #1da1f2;
+  }
+  
+  .share .fa-whatsapp {
+	color: #25d366;
+  }
+
+  #twitterfeeds {
+	  padding-top: 10px;
+	  width: 100%;
+	  height: auto;
+  }
+
+  #footer {
+	width: 100%; 
+	height: 200px;
+	background-color: lightgray;
+	bottom: 0%;
+  }
+
+  #footer p {
+	  font-size: 15px;
+	  bottom: 0%;
+	  padding: 10px 10px;
+  }
+/* -------------------header for smooth scroll--------------------------- */
+.header {
+	padding: 10px 16px;
+	color: black;
+	text-align: center;
+	width: auto;
+}
+
+.header a {color: black;}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+@media only screen and (max-width: 768px) {
+	body{
+		font-size: 14px;
+	}
+	#map{
+		width:100%;
+	}
+	.activedeaths{width:100%;}
+	#piechart div, #barchart div {
+		width: 25%;
+		height: 25%;
+		top: 0;
+	}
+	#safety{
+		width:100%;
+	}
+	#safety_tips {
+		width:100%;
+		bottom:0px;
+	}
+
+	.share {
+		display: flex;
+		padding: 16px;
+		top: 50%;
+		justify-content: space-around;
+		text-align: center;
+	  }
+	  
+	  .share a i {
+		font-size: 32px;
+	  }
+	  
+	  .share a {
+		margin: 12px 0;
+		transition: 500ms;
+	  }
+	  
+	  .share a:hover {
+		transform: scale(1.2);
+	  }
+	  
+	  .share .fa-facebook {
+		color: #3b5998;
+	  }
+	  
+	  .share .fa-twitter {
+		color: #1da1f2;
+	  }
+	  
+	  .share .fa-whatsapp {
+		color: #25d366;
+	  }
+}

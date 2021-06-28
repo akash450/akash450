@@ -5,32 +5,32 @@ body {
 }
 
 header, main {
-	overflow-x: auto;
-	flex-wrap: nowrap;
+  width: 100%;
+  height: auto;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  margin-top: 20px;
+}
+
+.movie-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
 }
 
 .image-container {
-	position: relative;
-	transition: transform 0.2s;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
 }
 
 .image-container:hover {
 	cursor: pointer;
-	transform: scale(1.1);
+  transform: scale(1.1);
+  transition: all ease 0.2s;
 }
-
-.image-container:hover .overlay {
-	opacity: 1;
-}
-
-/* .overlay {
-	position: absolute;
-	background: rgba(0, 0, 0, 0.8);
-	width: 100%;
-	transition: 0.5s ease;
-	opacity: 0;
-	bottom: 0;
-	font-size: 20px;
-	padding: 20px;
-	text-align: center;
-} */

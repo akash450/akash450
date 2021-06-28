@@ -13,7 +13,7 @@ const App = () => {
 
     const responseJson = await (response.json());
 
-    // console.log(responseJson)
+    console.log(responseJson)
 
     if (responseJson.Search) {
       setMovies(responseJson.Search)
@@ -23,8 +23,15 @@ const App = () => {
   useEffect(() => {getMovieRequest(searchVal);}, [searchVal])
 
   const isMovie = (movie) => {
-    // console.log(movie.Type)
+    console.log(movie.Type)
     if (movie.Type === "movie" && movie.Poster !== "N/A") {
+      return true;
+    }
+    return false;
+  }
+
+  const isSearchBarEmpty = (value) => {
+    if (value === '') {
       return true;
     }
     return false;
@@ -39,15 +46,14 @@ const App = () => {
         }
       </header>
       <main>
-        <div>
+        <div className="movie-container">
               {
                   movies.map(
                   (movie, index) =>
-                    isMovie(movie) ?
+                    (isMovie(movie) && !isSearchBarEmpty(searchVal)) ?
                     <div className="image-container">
                         <img src={movie.Poster} alt='movie'></img>
                     </div> : null
-                    // console.log("no movies")
               )}
           </div>
       </main>

@@ -1,0 +1,82 @@
+@import 'style.css';
+/* images */
+.img img {
+    max-width: 30%;
+    max-height: 30%;
+}
+/* review container */
+.review {
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    background-color: rgb(224, 107, 53);
+    color: white;
+}
+
+.quote {
+    font-size: 1.7em;
+	font-weight: bold;
+}
+
+.testimonial {
+    display: block;
+    text-align: center;
+    width: auto;
+}
+/* container for each review */
+.testimony-item {
+    margin-bottom: 2em;
+    padding: 20px;
+    border: 0;
+    border-radius: 10px;
+    background: white;
+    display: block;
+    margin: 10px 10px;
+    max-width: 100%;
+    max-height: 100%;
+}
+/* the half with image on it */
+.tophalf {
+    background-color: white;
+}
+
+/* star rating for reviews */
+.stars {
+    padding: 15px;
+}
+
+.fa {
+    font-size: 1.2em;
+}
+
+.checked {
+    color: gold;
+}
+
+/* ----------read more buttons--------------------------------- */
+.readmore, .collapse {
+	border: none;
+	display: inline-block;
+	background-color: white;
+	font-size: 0.9em;
+	padding: 15px;
+	border-radius: 25px;
+	cursor: pointer;
+}
+
+.readmore:hover, .collapse:hover {
+    background-color: black;
+    color: white;
+	transition: all 0.3s;
+}
+
+  /*--------displaying staff information horizontally------------ */
+
+@media screen and (min-width: 800px) {
+    .testimonial {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}

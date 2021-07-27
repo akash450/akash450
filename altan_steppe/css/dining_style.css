@@ -1,0 +1,48 @@
+@import 'style.css';
+
+/* -------------images and containers-------------------- */
+.restaurant-container img, .hunting-container img {
+	min-width: 35%;
+	max-width: 60%;
+	margin: 10px;
+	height: 300px;
+}
+
+.restaurant-container, .hunting-container {
+	padding: 0.5em 1em;
+}
+
+/*--------------restaurant--------------- */
+.restaurant-container {
+	width: 100%;
+	height: auto;
+}
+
+.restaurant-container img {
+    float: left;
+	min-width: 35%;
+	max-width: 60%;
+	margin: auto;
+	clear: left;
+    height: 300px;
+    padding: 15px;
+}
+
+.dining-item {
+	text-align: left;
+    margin: 10px 10px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* ------------------hunting tour-------------------- */
+.hunting-container {
+	width: 100%;
+	height: auto;
+	display: flex;
+}
+
+.hunting-container img {
+    float: right;
+	clear: right;
+}

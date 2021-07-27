@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en-au">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Altan Steppe -- Homepage
+        </title>
+        <link href="css/home_style.css" rel="stylesheet" type="text/css">
+        <!--if javascript is disabled-->
+        <noscript>
+            <link href="css/style.css" rel="stylesheet" type="text/css">
+        </noscript>
+    </head>
+    <body>
+        <!--logo-->
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="altan steppe logo">
+            </a>
+        </div>
+        <!--main navigational element-->
+        <header class="navheader">
+            <!--hamburger-->
+            <div class="toggle" onclick="toggle_hamburger()">☰</div>
+            <nav class="topnav">
+                <ul class="menu">
+                    <li> 
+                        <!-- link one -->
+                        <a href="index.html" title="homepage" class="active">Home</a>
+                    </li>
+                    <li>
+                        <!-- link two -->
+                        <a href="gallery.html" title="gallery"> Gallery </a>
+                    </li>
+                    <li>
+                        <!-- link three -->
+                        <a href="services.html" title="activities"> Activities </a>
+                    </li>
+                    <li>
+                        <!-- link four -->
+                        <a href="dining.html" title="dining"> Dining </a>
+                    </li>
+                    <li>
+                        <!-- link five -->
+                        <a href="booking.html" title="booking"> Booking </a>
+                    </li>
+                    <li>
+                        <!-- link six -->
+                        <a href="quiz.html" title="quiz"> Quiz </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!--homepage content-->
+        <main class="main-content">
+            <h1>Homepage</h1>
+            <!--welcome-->
+            <section class="slideshow">
+                <h2>Welcome to our resort!</h2>
+                <article class = "cycle-slideshow"
+                    data-cycle-fx=fade
+                    data-cycle-pager-fx=scrollVert
+                    data-cycle-timeout=6000
+                    data-cycle-slides=".slide">
+                    <!--welcome-->
+                    <div class="slide">
+                        <h3>Welcome!
+                        </h3>
+                        <p class="text"> 
+                            'Sain Bainuu' to all lovers of adventure, history and the pure, raw outdoors.
+                            If you want to experience the untamed awesomeness of Khaan era Mongolia, then this is the place for you!
+                            Guests will stay in a traditional 'ger' for the entire stay amidst a vast stretch of grasslands just 15 minutes drive from Thredbo. With loads of
+                            fun activities and a free spirited, chill (literally) atmosphere, you'll never want to leave!
+                        </p>
+                        <span class="btn">
+                            <a title="Explore activities" href="services.html">Explore activities!</a>
+                        </span>
+                    </div>
+
+                    <!--gallery-->
+                    <div class="slide">
+                        <h3>Gallery
+                        </h3>
+                        <p class="text"> 
+                            Still not feeling like staying? Be sure to check out our awesome gallery of fun
+                            experiences! You're missing out!
+                        </p>
+                        <span class="btn">
+                            <a title="See the gallery" href = "gallery.html">See gallery!</a>
+                        </span>
+                    </div>
+
+                    <!--how to get there-->
+                    <div class="slide">
+                        <h3>How To Get There
+                        </h3>
+                        <p class="text"> 
+                            Reachable in 2 hours from Canberra Airport, the Eagles' Nest Restaurant is our reception point. From here, a
+                            14 minute journey in our specialised 4WD cars will carry you directly to your very own, fully furnished ger.
+                            For a fuller, richer experience, book a ger in the Altan Steppe now! If planning a holiday lasting more 
+                            than 3 days, it is highly recommended to book another accomodation in Thredbo; however you will be still allowed
+                            access to the resort and all its facilities/activities.
+                        </p>
+                    </div>
+                    <!--pagination-->
+                    <div class="cycle-pager"></div>
+                </article>
+            </section>
+        </main>
+        <!--footer-->
+        <footer class="footer">
+            <div class="footerwrap">
+                <!--contact-->
+                <div class="contact">
+                    <p>Contact No: +617 422 896 553</p>
+                </div>
+                <nav class="info-links">
+                    <ul>
+                        <li>
+                            <a href="about.html" title="about us">About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="staff.html" title="staff">Staff
+                            </a>
+                        </li>
+                        <li>
+                            <a href="faq.html" title="faqs">FAQs
+                            </a>
+                        </li>
+                        <li>
+                            <a href="testimonial.html" title="testimonials">Testimonials
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="addresswrap">
+                <!--contact-->
+                <div class="address">
+                    <p>
+                        Location: Rams Head North<br>
+                        Mt Kosciuszko National Park, NSW<br>
+                        2627
+                    </p>
+                </div>
+            </div>
+            <!--embedded map-->
+            <div class="mapwrap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15171.037580442387!2d148.25275799614585!3d-36.482373070944135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b23497a177d785d%3A0x81c146ee119a451e!2sRams%20Head%20North!5e1!3m2!1sen!2sau!4v1590474305727!5m2!1sen!2sau" 
+                    width="300" height="300" allowfullscreen="" aria-hidden="false" 
+                    tabindex="0"></iframe>                   
+            </div>
+            <!--social-->
+            <div class="socialwrap">
+                <!--social media icons-->
+                <div class="social">
+                    <a href="https://www.facebook.com/" title="facebook">
+                    <i class="fa fa-facebook-official"></i>
+                    </a>
+                    <noscript>
+                        <div class="social-disabled">
+                            <a href="https://www.facebook.com/" title="facebook">Facebook</a>
+                        </div>
+                    </noscript>
+                    <a href="https://www.snapchat.com/" title="snapchat">
+                    <i class="fa fa-snapchat-square"></i>
+                    </a>
+                    <noscript>
+                        <div class="social-disabled">
+                            <a href="https://www.snapchat.com/" title="snapchat">Snapchat</a>
+                        </div>
+                    </noscript>
+                    <a href="https://www.youtube.com/" title="youtube">
+                    <i class="fa fa-youtube-square"></i>
+                    </a>
+                    <noscript>
+                        <div class="social-disabled">
+                            <a href="https://www.youtube.com/" title="youtube">YouTube</a>
+                        </div>
+                    </noscript>
+                    <a href="https://www.instagram.com/" title="instagram">
+                    <i class="fa fa-instagram"></i>
+                    </a>
+                    <noscript>
+                        <div class="social-disabled">
+                            <a href="https://www.instagram.com/" title="facebook">Instagram</a>
+                        </div>
+                    </noscript>
+                    <a href="https://www.twitter.com/" title="twitter">
+                    <i class="fa fa-twitter-square"></i>
+                    </a>
+                    <noscript>
+                        <div class="social-disabled">
+                            <a href="https://www.twitter.com/" title="twitter">Twitter</a>
+                        </div>
+                    </noscript>
+                </div>
+            </div>
+        </footer>
+        <!--scripts-->
+        <script src="https://kit.fontawesome.com/fa6034e03e.js" crossorigin="anonymous"></script>
+        <script src="js/cycle/jquery-3.5.1.min.js"></script>
+        <script src="js/cycle/jquery.cycle2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="js/responsive_navbar.js"></script>
+    </body>
+</html>

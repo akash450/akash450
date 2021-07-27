@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en-au">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Altan Steppe -- Booking
+        </title>
+        <link href="css/booking_style.css" rel="stylesheet" type="text/css">
+        <!--if javascript is disabled-->
+        <noscript>
+            <link href="css/style.css" rel="stylesheet" type="text/css">
+        </noscript>
+    </head>
+    <body>
+        <!--logo-->
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="altan steppe logo">
+            </a>
+        </div>
+        <!--main navigational element-->
+        <header class="navheader">
+            <!--hamburger-->
+            <div class="toggle" onclick="toggle_hamburger()">☰</div>
+            <nav class="topnav">
+                <ul class="menu">
+                    <li> 
+                        <!-- link one -->
+                        <a href="index.html" title="homepage">Home</a>
+                    </li>
+                    <li>
+                        <!-- link two -->
+                        <a href="gallery.html" title="gallery"> Gallery </a>
+                    </li>
+                    <li>
+                        <!-- link three -->
+                        <a href="services.html" title="activities"> Activities </a>
+                    </li>
+                    <li>
+                        <!-- link four -->
+                        <a href="dining.html" title="dining"> Dining </a>
+                    </li>
+                    <li>
+                        <!-- link five -->
+                        <a href="booking.html" title="booking" class="active"> Booking </a>
+                    </li>
+                    <li>
+                        <!-- link six -->
+                        <a href="quiz.html" title="quiz"> Quiz </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-content">
+            <h1>Book Now!</h1>
+            <section id="booking-form">
+                <h3>Book your first (or second) adventure here</h3>
+                <form id="book-form" method="post" action="booking.html">
+                    <!--personal details-->
+                    <fieldset>
+                        <legend>
+                            Personal Details
+                        </legend>
+                        <p>Please enter your details below:</p>
+                        <div class="form-item">
+                            <label for="form-first-name">First Name*:</label>
+                            <div class="form-element">
+                                <input type="text" name="firstname" id="form-first-name" placeholder="First name only" required>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <label for="form-last-name">Last Name*:</label>
+                            <div class="form-element">
+                                <input type="text" name="lastname" id="form-last-name" placeholder="Last name only" required>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <label for="form-email">Email*</label>
+                            <div class="form-element">
+                                <input type="email" name="email" id="form-email" placeholder="Your email" required>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <label for="form-address">Address* <span>(at least 5 chars long)</span>:</label>
+                            <div class="form-element">
+                                <input type="text" name="address" minlength=5 id="form-address" placeholder="Your address" required>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <!--booking-->
+                    <fieldset>
+                        <legend>
+                            Booking
+                        </legend>
+                        <p>Please enter booking details below:</p>
+                        <div class="form-item">
+                            <label for="form-date">Date*:</label>
+                            <div class="form-element">
+                                <input type="date" name="date" id="form-date" required>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <label for="form-guests">Guests* <span>(1 guest minimum)</span>:</label>
+                            <div class="form-element">
+                                <input type="number" name="guests" min=1 max=15 id="form-guests" placeholder="No. Guests" 
+                                onchange="displayPrice()" required>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <label for="form-nights">Nights* <span>(1 night minimum)</span>:</label>
+                            <div class="form-element">
+                                <input type="number" name="nights" min="1" max="7" id="form-nights" placeholder="No. Nights" 
+                                onchange="displayPrice()" required>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <label for="form-quizcode">Discount Quiz Code:</label>
+                            <div class="form-element">
+                                <input type="text" name="quizcode" id="form-quizcode" placeholder="Discount Quiz Code"
+                                onchange="displayPrice()">
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <label>Include Hunting Tour?</label>
+                            <div class="form-element">
+                                <label for="form-yes"></label>
+                                <input type="checkbox" id="form-yes" name="yes" value="Yes" onclick="displayPrice()"> Yes
+                            </div>
+                        </div>
+                    </fieldset>
+                    <!--billing-->
+                    <fieldset>
+                        <legend>
+                            Billing
+                        </legend>
+                        <p>Please enter payment details below:</p>
+                        <div class="form-item">
+                            <label for="form-creditno">Credit/Debit No:*:</label>
+                            <div class="form-element">
+                                <input type="text" name="creditno" id="form-creditno" placeholder="Credit/Debit No." required>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <label for="form-guests">CVV*:</label>
+                            <div class="form-element">
+                                <input type="text" name="cvv" id="form-cvv" placeholder="CVV" required>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <!--price estimate-->
+                    <div id="prices"></div>
+                    
+                    <!--submit & price calcs-->
+                    <fieldset>
+                        <legend>
+                            Submit
+                        </legend>
+                        <div id="submitwrap">
+                            <!--submit-->
+                            <input id="submit" type="submit" value="Submit!">
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        <!--footer-->
+        <footer class="footer">
+            <div class="footerwrap">
+                <!--contact-->
+                <div class="contact">
+                    <p>Contact No: +617 422 896 553</p>
+                </div>
+                <nav class="info-links">
+                    <ul>
+                        <li>
+                            <a href="about.html" title="about us">About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="staff.html" title="staff">Staff
+                            </a>
+                        </li>
+                        <li>
+                            <a href="faq.html" title="faqs">FAQs
+                            </a>
+                        </li>
+                        <li>
+                            <a href="testimonial.html" title="testimonials">Testimonials
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="addresswrap">
+                <!--contact-->
+                <div class="address">
+                    <p>
+                        Location: Rams Head North<br>
+                        Mt Kosciuszko National Park, NSW<br>
+                        2627
+                    </p>
+                </div>
+            </div>
+            <!--embedded map-->
+            <div class="mapwrap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15171.037580442387!2d148.25275799614585!3d-36.482373070944135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b23497a177d785d%3A0x81c146ee119a451e!2sRams%20Head%20North!5e1!3m2!1sen!2sau!4v1590474305727!5m2!1sen!2sau" 
+                    width="300" height="300" allowfullscreen="" aria-hidden="false" 
+                    tabindex="0"></iframe>                   
+            </div>
+            <!--social-->
+            <div class="socialwrap">
+                <!--social media icons-->
+                <div class="social">
+                    <a href="https://www.facebook.com/" title="facebook">
+                    <i class="fa fa-facebook-official"></i>
+                    </a>
+                    <a href="https://www.snapchat.com/" title="snapchat">
+                    <i class="fa fa-snapchat-square"></i>
+                    </a>
+                    <a href="https://www.youtube.com/" title="youtube">
+                    <i class="fa fa-youtube-square"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" title="instagram">
+                    <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="https://www.twitter.com/" title="twitter">
+                    <i class="fa fa-twitter-square"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+        <!--scripts-->
+        <script src="https://kit.fontawesome.com/fa6034e03e.js" crossorigin="anonymous"></script>
+        <script src="js/responsive_navbar.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+        <script src="js/form_validator.js"></script>
+        <script src="js/price_display.js"></script>
+    </body>
+</html>

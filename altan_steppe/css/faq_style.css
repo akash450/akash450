@@ -1,0 +1,8 @@
+@import 'style.css';
+
+#faq-section {
+    width: 100%;
+    height: auto;
+}
+
+.content {font-size: 1.2em;}

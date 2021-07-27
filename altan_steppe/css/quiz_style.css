@@ -1,0 +1,67 @@
+@import 'style.css';
+/* container for quiz */
+#quiz-container {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    margin-top: 15px;
+    object-fit: fill;
+}
+/* section containing all questions */
+#quiz {
+    width: 100%;
+    height: auto;
+    font-size: 1em;
+    text-align: center;
+}
+/* separate section for results, home, submit buttons */
+#buttons-container {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    margin: 10px 10px;
+}
+
+/* submit related functions and styles */
+#submit {
+    font-size: 1.5em;
+	border: none;
+	background-color: white;
+	padding: 0.5em 1em;
+	border-radius: 25px;
+	cursor: pointer;
+}
+
+#submit:hover {
+    background-color: rgb(224, 107, 53);
+	font-weight: bolder;
+	transition: all 0.3s;
+}
+/* question and answer styling */
+.question {
+    font-weight: 600;
+}
+
+.answers {
+    margin-bottom: 10px;
+}
+
+.answers label {
+    display: block;
+}
+
+#results {font-size: 2em;}
+
+.header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.answer-text {
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,12 @@
+@import 'style.css';
+
+/* image */
+#khaan {
+    float: left;
+	min-width: 35%;
+	max-width: 60%;
+	margin: auto;
+	clear: left;
+    height: 300px;
+    padding: 25px;
+}

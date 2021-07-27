@@ -1,0 +1,36 @@
+@import "style.css";
+
+/* ----------- wedding ----------------- */
+#weddings {
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+#weddings img {
+	max-width: 35%;
+	max-height: 35%;
+	margin: auto;
+}
+
+/* ---------activities------------------- */
+#activities {
+    width: 100%;
+	height: auto;
+	text-align: center;
+}
+/*-------------calendar-------------- */
+#calendar {
+	margin-top: 15px;
+	display: flex;
+	justify-content: center;
+}
+
+/* --------------buttons ------------ */
+
+.calendar-content {
+	position: relative;
+	text-align: center;
+	padding: 15px;
+	height: auto;
+}

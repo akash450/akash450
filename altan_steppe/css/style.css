@@ -1,0 +1,376 @@
+@charset "utf-8";
+/*--------------main body------------------------------------------------------- */
+body {
+	background: linear-gradient(rgba(255, 255, 255, .6), rgba(255,255,255,.6)), url("../images/yellow_steppe2.jpg");
+	/* to get the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-size: 15px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ------------------------headers and sections------------------------------- */
+h1 {
+	font-size: 2em;
+	font-weight: bolder;
+}
+
+h2, strong {
+	font-size: 1.7em;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+h4 {text-decoration: underline;}
+
+h1, h2, h3, h4 {text-align: center;}
+
+section, article {
+	max-width: 100%;
+	height: auto;
+	text-align: center;
+	margin-top: 15px;
+}
+
+.text {max-width: 100%;}
+
+/*---------------- animation -------------------------- */
+ /* animation for staff and testimonial tabs - slide in from bottom */
+ @keyframes animate {
+	from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
+}
+
+/* staff and testimony tabs only */
+.fade1 {animation: animate 2s;}
+
+.fade2 {animation: animate 2s 0.5s;}
+
+.fade3 {animation: animate 2s 1s;}
+
+/* -------------------faq style boxes------------------------ */
+
+.box, .accordion {
+    height: auto;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    padding: 0.5em 1em;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.box {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.accordion {
+    width: 100%;
+    height: auto;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.dropdown {
+    color: white;
+    padding: 0 18px;
+	background-color: black;
+	max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+/* ------------------Cycle2 slideshows-------------------- */
+/* slideshow */
+.slideshow article {
+	max-width: 600px;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+.imgcontainer img {
+	width: 100%;
+	border-radius: 10px;
+	height: auto;
+}
+
+.caption {font-size: 1.2em;}
+
+/* slider dots for slides */
+.cycle-pager {
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.cycle-pager span {
+	cursor: pointer;
+	background-color: #eee;
+	border: 1px solid #666;
+	border-radius: 50%;
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	margin: 10px 10px;
+}
+
+.cycle-pager span.cycle-pager-active {
+	background-color: rgb(224, 107, 53);
+	box-shadow: inset 2px 0px 2px -2px #333;
+}
+
+.cycle-pager span:hover {
+	background-color: #666;
+	transition: all 0.3s ease;
+}
+
+/* ------- logo and navheader ------------- */
+.logo img, .navheader {
+	width: 100%;
+	height: auto;
+}
+
+/*- -------- navbar ----------------------*/
+.navheader {background-color: rgb(224, 107, 53);}
+.menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	flex-direction: column;
+	display: block;
+}
+
+.topnav li, .info-links li {
+	cursor: pointer;
+	padding: 0.5em 1em;
+	flex: auto;
+	text-align: center;
+}
+
+.topnav a {
+	text-decoration: none;
+	color: black;
+	padding: 0.5em 1em;
+}
+
+.topnav {
+	font-size: 1.2em;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+.topnav a:hover {
+	background-color: white;
+	transition: all 0.4s ease;
+}
+
+.toggle {
+	width: 100%;
+	display: block;
+	text-align: right;
+	padding: 0.5em 1em;
+	font-weight: bold;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-size: 1.5em;
+}
+
+/* --------- responsive navbar: desktop ----------- */
+@media screen and (min-width:768px) {
+	.menu {
+		display: flex !important;
+		flex-direction: row;
+	}
+	.toggle {display:none;}
+	.topnav li {text-align: center;}
+	.topnav {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+}
+
+/* ----------------------- common content in each page --------------------*/
+.main-content {
+    max-width: 100%;
+	height: auto;
+    color: black;
+	padding: 25px;
+	background-image: linear-gradient(rgba(255, 255, 255, .6), rgba(255,255,255,.6));
+}
+
+.btn {
+	display: inline-block;
+	border: 1px solid black;
+	font-size: 1.5em;
+	background-color: white;
+	padding: 0.5em 1em;
+	margin-top: 10px;
+	border-radius: 25px;
+	cursor: pointer;
+}
+
+.btn a {
+	text-decoration: none;
+	color: black;
+}
+
+.btn:hover {
+	background-color: rgb(224, 107, 53);
+	font-weight: bolder;
+	transition: all 0.3s ease;
+}
+
+/* ----------footer---------------*/
+
+.footer {
+	float: left;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	bottom: 0;
+	background-color: black;
+	color: white;
+	font-size: 0.9em;
+	font-weight: bolder;
+	padding-top: 15px;
+	height: auto;
+}
+
+.footerwrap, .addresswrap {
+	width: auto;
+	height: 100%;
+	flex: 1 1 0;
+	margin: 10px 10px;
+	text-align: center;
+}
+
+.footerwrap {border-right: 3px dotted white;}
+
+.socialwrap, .mapwrap {
+	display: flex;
+	justify-content: center;
+	border-top: 3px dotted white;
+	height: 100%;
+	width: auto;
+	margin: auto;
+	flex: 100%;
+   	order: 3;
+}
+
+.mapwrap iframe {
+	width: 70%;
+	margin: 10px 10px;
+}
+
+ /* -------responsive footer---------- */
+@media screen and (max-width:486px) {
+	 .footer {display: block;}
+	 .footerwrap {
+		border-bottom: 3px dotted white;
+		border-right: none;
+	}
+}
+
+ /* -------------- footer contents ----------------------- */
+ /* about, staff, testimonials, faqs */
+.info-links {
+	width: auto;
+	height: auto;
+	overflow: hidden;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.info-links ul {list-style: none;}
+
+.info-links a {
+	padding: 0.5em 1em;
+	color: white;
+	text-decoration: none;
+}
+
+.info-links a:hover {
+	background-color: white;
+	color: black;
+	transition: all 0.4s ease;
+}
+
+/* contact */
+.contact, .address {
+	font-size: 1.3em;
+	padding: 0.5em 1em;
+}
+
+/* -----navigational elements in footer---- */
+
+/* social media icons */
+.social {
+	font-size: 2em;
+	width: auto;
+	height: auto;
+	margin-top: 15px;
+}
+
+.social a {
+	padding: 15px;
+	display: inline-block;
+}
+/* icons */
+.social i {
+	color: white;
+	width: auto;
+	margin: 10px 10px;
+}
+
+/*------------active elements------------- */
+.info-links a.active, .topnav a.active {
+	font-weight: bolder;
+	background-color: white;
+	color: black;
+}
+
+/* ----------javascript disabled (<noscript>)--------- */
+/* faq & activity accordion disabled */
+.dropdown-disabled {
+	color: white;
+	padding: 0 18px;
+	background-color: black;
+	height: auto;
+	overflow: hidden;
+}
+/* social media icons disabled */
+.social-disabled a {
+	font-size: 0.5em;
+	color: white;
+}
+
+/* --------reference section------------ */
+
+aside {
+	max-width: 100%;
+	height: auto;
+	font-style: italic;
+}
+
+.mapwrap aside {color: white;}
+
+ol li {text-align: center;}

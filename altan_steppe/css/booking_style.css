@@ -1,0 +1,112 @@
+@import 'style.css';
+/* ---------------------booking-----------------*/
+
+/* Form */
+h2 {
+	text-align: center;
+	font-size: 30px;
+	font-weight: bolder;
+	text-decoration: underline;
+}
+
+fieldset {
+    margin-bottom: 2em;
+    padding: 20px;
+    border: 0;
+    border-radius: 10px;
+    background: white;
+    display: block;
+}
+
+legend {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    margin: 0 -1em;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(-90deg, rgb(224, 107, 53), rgb(224, 150, 53));
+}
+
+fieldset .form-item {
+    display: flex;
+    margin-bottom: 1em;
+    align-items: center;
+}
+
+fieldset .form-item > label, span {
+    font-weight: bold;
+    width: 25%;
+    padding-right: 2em;
+    text-align: right;
+}
+
+span {
+    font-size: 0.7em;
+}
+
+fieldset .form-item {
+    width: 75%;
+}
+
+.form-element {
+	width: 70%;
+}
+
+fieldset .form-item .form-element > label {
+    display: block;
+}
+
+label.error {
+	color: red;
+}
+
+input[type=text].error, input[type=number].error, input[type=email].error,
+input[type=date].error, textarea.error {
+	border: 2px solid red;
+}
+
+input[type=text], input[type=number], input[type=email], input[type=date], textarea {
+    box-shadow: rgba(0,0,0,0.15) 5px 5px 5px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+input[type=checkbox] {
+    margin-right: 1em;
+}
+
+#submitwrap {text-align: center;}
+
+#submit {
+    font-weight: bold;
+    font-size: 1.3em;
+    padding: 0.5em 1em;
+    margin: 10px 10px;
+    color: black;
+    border: none;
+    border-radius: 25px;
+	background: linear-gradient(-90deg, rgb(224, 107, 53), rgb(224, 150, 53));
+	display: inline-block;
+    cursor: pointer;
+}
+
+#submit:hover {
+	font-size: 1.5em;
+	transition: all 0.3s ease;
+}
+
+/* price estimate */
+#prices {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    margin-top: 15px;
+    object-fit: fill;
+    font-size: 1.5em;
+    font-weight: bold;
+}

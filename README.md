@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @akash450
-- 👀 I’m interested in web development, fullstack development and software programming
+- 👀 I’m interested in front-end web development, fullstack development and software programming
 - 🌱 I’m currently learning Electrical Engineering & Information Technology
 - 📫 How to reach me: 
     - Email: akash1305.ai@gmail.com
